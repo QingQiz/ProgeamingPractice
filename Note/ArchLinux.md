@@ -1,4 +1,4 @@
-## Config int ArchLinux 
+## Config in ArchLinux 
 
 ### 电源管理
 /etc/systemd/logind.conf
