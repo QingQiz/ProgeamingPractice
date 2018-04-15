@@ -15,17 +15,17 @@
 ### 修改服务器开放的端口
 
 > vi /etc/ssh/sshd_config
-
+>
 > iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT
-
+>
 > iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT
-
+>
 > iptables-save
 
 ### 部署 ssr
 
 > wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
-
+>
 > vi /etc/shadowsocks.json
 
 ```json
@@ -43,11 +43,11 @@
 ```
 
 > iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
-
+>
 > iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
-
+>
 > iptables-save
-
+>
 > /etc/init.d/shadowsocks restart
 
 
@@ -58,5 +58,5 @@
 ### 部署锐速
 
 > wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
-
+>
 > systemctl restart sshd.service
