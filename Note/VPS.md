@@ -7,7 +7,9 @@
 ### 基本应用
 
 > yum install vim
+>
 > yum install git
+>
 > yum install pytho*
 
 ### 修改服务器开放的端口
