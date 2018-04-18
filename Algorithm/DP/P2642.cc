@@ -17,7 +17,7 @@ int msl[maxn], msr[maxn];
 
 
 int main() {
-    int n; cin >> n;
+    int n; std::cin >> n;
 
     for (int i = 1; i <= n; ++i) {
         scanf("%d", dt + i);
