@@ -1,9 +1,11 @@
+now
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
 # CMakeFiles
+CMakeLists.txt
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
