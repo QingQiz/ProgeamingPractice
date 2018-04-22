@@ -3,28 +3,33 @@
 using namespace std;
 typedef long long ll;
 
-const ll mod = 1e9 + 7;
-
-ll qproduct(int b, int idx) {
-    if (idx > 1) {
-        ll tmp = qproduct(b, idx / 2);
-        tmp = (tmp * tmp) % mod;
-        if (idx & 1) tmp = (tmp * b) % mod;
-        return tmp;
-    } else {
-        return b;
-    }
-} // 快速幂
-
-int main() {
-    int n, k, ans;
-    while (cin >> n >> k) {
-        if (k == 1) {
-            cout << n << endl;
-            continue;
+ll mod_pro(int a, int b, int c) {
+    ll ret = 0, tmp = a % c;
+    while (b) {
+        if (b & 1) {
+            if ((ret += tmp) > c) ret -= c;
         }
-
-        ans = ((qproduct(k, n + 1) - k) / (k - 1));
-        cout << ans << endl;
+        if ((tmp <<= 1) > c) tmp -= c;
+        b >>= 1;
     }
-}
+    return ret;
+} // 计算 (a * b) % c
+
+ll QP_R(ll a, ll b, ll c) {
+    if (b > 1) {
+        ll tmp = QP_R(a, b >> 1, c);
+        tmp = mod_pro(tmp, tmp, c);
+        if (b & 1) tmp = mod_pro(tmp, a, c);
+        return tmp;;
+    } else return a;
+} // 快速幂递归 (a^b)%c
+
+ll QR(ll a, ll b, ll c) {
+    ll ret = 1;
+    while (b) {
+        if (b & 1) ret = mod_pro(ret, a, c);
+        a = mod_pro(a, a, c);
+        b >>= 1;
+    }
+    return ret;
+} // 快速幂非递归 (a^b)%c

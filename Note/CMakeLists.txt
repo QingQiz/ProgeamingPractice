@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(now)
 
-add_executable(now ../_.cc)
+add_executable(now .cc)
 
 set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
