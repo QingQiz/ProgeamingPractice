@@ -27,7 +27,7 @@ void merge(Mat dt[], int l, int m, int r) {
     while (n2 <= r) tmp[top++] = dt[n2++];
 
     for (int i = l; i <= r; ++i) dt[i] = tmp[i - l];
-    delete tmp;
+    delete [] tmp;
 }
 
 void sort(Mat dt[], int l, int r) {
