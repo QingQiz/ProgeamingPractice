@@ -10,11 +10,11 @@ yum install vim
 
 yum install git
 
-yum install pytho\*
+~~yum install pytho\*~~
 
 ### 修改服务器开放的端口
 
-vi /etc/ssh/sshd_config
+vi /etc/ssh/sshd\_config
 
 iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT
 
@@ -42,7 +42,18 @@ vi /etc/shadowsocks.json
 "fast_open":true
 ```
 
-- 客户端配置
+#### 防火墙配置
+
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
+
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
+
+iptables-save
+
+/etc/init.d/shadowsocks restart
+
+
+#### 客户端配置
 
 ```json
 {
@@ -59,22 +70,14 @@ vi /etc/shadowsocks.json
 }
 ```
 
-- 防火墙配置
 
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
+### 部署锐速
 
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
-
-iptables-save
-
-/etc/init.d/shadowsocks restart
-
-
-### 更改内核版本
+#### 更改内核版本
 
 rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
 
-### 部署锐速
+#### 下载锐速
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
 
