@@ -29,5 +29,6 @@ CTestTestfile.cmake
 *.zip
 *.tar.gz
 *.rar
+ACM-ICPC/language_prac/java/*
 hs_err_pid*
 .recommenders
