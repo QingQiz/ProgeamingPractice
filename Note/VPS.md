@@ -2,31 +2,31 @@
 
 ### 更改密码
 
-passwd
+\# ``passwd``
 
 ### 基本应用
 
-yum install vim
+\# ``yum install vim``
 
-yum install git
+\# ``yum install git``
 
-~~yum install pytho\*~~
+~~\# ``yum install pytho\*``~~
 
 ### 修改服务器开放的端口
 
-vi /etc/ssh/sshd\_config
+\# ``vi /etc/ssh/sshd\_config``
 
-iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT
+\# ``iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT``
 
-iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT
+\# ``iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport \<port\> -j ACCEPT``
 
-iptables-save
+\# ``iptables-save``
 
 ### 部署 ssr
 
-wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
+\# ``wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh``
 
-vi /etc/shadowsocks.json
+\# ``vi /etc/shadowsocks.json``
 
 ```json
 "server":"0.0.0.0",
@@ -44,13 +44,13 @@ vi /etc/shadowsocks.json
 
 #### 防火墙配置
 
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
+\# ``iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT``
 
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT
+\# ``iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport \<port\> -j ACCEPT``
 
-iptables-save
+\# ``iptables-save``
 
-/etc/init.d/shadowsocks restart
+\# ``/etc/init.d/shadowsocks restart``
 
 
 #### 客户端配置
@@ -75,10 +75,10 @@ iptables-save
 
 #### 更改内核版本
 
-rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
+\# ``rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force``
 
 #### 下载锐速
 
-wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
+\# ``wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh``
 
-systemctl restart sshd.service
+\# ``systemctl restart sshd.service``
