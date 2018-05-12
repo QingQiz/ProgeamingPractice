@@ -1,16 +1,17 @@
 const int maxn = 100000;
+typedef long long ll;
 
 #define lson(x) (x << 1)
 #define rson(x) (x << 1) | 1
 
 class SGT {
 public:
-    long long val;
-    long long lazy;
+    ll val;
+    ll lazy;
     int len;
 }sgt[maxn << 2];
 
-void build(int rt, long long arr[], int l, int r) {
+void build(int rt, ll arr[], int l, int r) {
     sgt[rt].lazy = 0;
     sgt[rt].len = r - l + 1;
     if (l == r) {
@@ -36,7 +37,7 @@ void pushdown(int rt) {
     sgt[rt].lazy = 0;
 }
 
-void update(int rt, int l, int r, int dl, int dr, long long add) {
+void update(int rt, int l, int r, int dl, int dr, ll add) {
     pushdown(rt);
     if (dl > r || dr < l) return;
     if (dl <= l && r <= dr) {
@@ -51,7 +52,7 @@ void update(int rt, int l, int r, int dl, int dr, long long add) {
     sgt[rt].val = sgt[lson(rt)].val + sgt[rson(rt)].val;
 }
 
-long long query(int rt, int l, int r, int ql, int qr) {
+ll query(int rt, int l, int r, int ql, int qr) {
     pushdown(rt);
     if (r < ql || l > qr) return 0;
     if (ql <= l && r <= qr) {
@@ -59,7 +60,7 @@ long long query(int rt, int l, int r, int ql, int qr) {
     }
 
     int mid = (l + r) / 2;
-    long long ret = 0;
+    ll ret = 0;
     if (l <= mid) {
         ret += query(lson(rt), l, mid, ql, qr);
     }
