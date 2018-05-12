@@ -2,7 +2,7 @@
 
 ### 电源管理
 
-/etc/systemd/logind.conf
+``/etc/systemd/logind.conf``
 
 ### host
 
@@ -10,12 +10,30 @@
 
 ### 源
 
-/etc/pacman.d/mirrirlist
+``/etc/pacman.d/mirrirlist``
 
 ### grub
 
-/etc/default/grub
+``/etc/default/grub``
 
-### i3
+### shadowsocks
 
-%HOME/.config/i3/config
+``/etc/shadowsocks/``
+
+### Chinese
+
+- 解决qt界面无法输入中文
+
+$ ``qtconfig-qt4``
+
+> Interface -> Default Input Method -> iBus
+
+在 zshrc, xinitrc 添加
+
+```shell
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+```
+
+修改i3config 添加(修改) ``exec --no-startup-id ibus-daemon --xim -d``
