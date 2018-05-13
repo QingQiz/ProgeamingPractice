@@ -27,11 +27,11 @@
 > $ ``qtconfig-qt4``
 > > Interface -> Default Input Method -> iBus
 在 zshrc, xinitrc 添加
-```shell
+> ```shell
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-```
+> ```
 修改i3config 添加(修改) ``exec --no-startup-id ibus-daemon --xim -d``
 
 ### Sound
