@@ -6,7 +6,7 @@
 
 ### host
 
-/etc/hosts
+``/etc/hosts``
 
 ### 源
 
