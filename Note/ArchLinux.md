@@ -20,6 +20,21 @@
 
 ``/etc/shadowsocks/``
 
+```json
+{
+    "server":"my_server_ip",
+    "server_port":8388,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"mypassword",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false,
+    "workers": 1,
+    "prefer_ipv6": false
+}
+```
+
 ### Chinese
 
 解决qt界面无法输入中文
@@ -46,3 +61,7 @@ defaults.ctl.card 1
 defaults.pcm.card 1
 defaults.timer.card 1
 ```
+
+### YouComplete
+
+\# ``ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5``
