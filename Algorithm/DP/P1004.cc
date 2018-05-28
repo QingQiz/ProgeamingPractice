@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1004.cc
 // Description: 方格取数
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1004
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

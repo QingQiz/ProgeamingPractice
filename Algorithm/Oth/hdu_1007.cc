@@ -1,11 +1,8 @@
-// filename: _hdu_1007.cc
-// adress: http://acm.hdu.edu.cn/showproblem.php?pid=1006
-// |\key to the problem:
-//		排序坐标，算出相邻三点之间的最小间距，得出最小值，除以二输出
-//		如果每两点之间的距离都算出来的话，时间复杂度为n * n， 铁定超时
-//
-// Create by Sofee on 2018-02-28
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://acm.hdu.edu.cn/showproblem.php?pid=1006
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstdio>
 #include <iostream>
 #include <cmath>
@@ -54,3 +51,7 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 排序坐标，算出相邻三点之间的最小间距，得出最小值，除以二输出
+// 如果每两点之间的距离都算出来的话，时间复杂度为n * n， 铁定超时
+// ============================================================

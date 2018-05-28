@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1121.cc
 // Description:  环状最大两段子段和
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1121
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

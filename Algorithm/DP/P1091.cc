@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1091.cc
 // Description: 合唱队形
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1091
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <cstring>

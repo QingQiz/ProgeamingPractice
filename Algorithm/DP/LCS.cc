@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P143.cc
 // Description: 【模板】最长公共子序列
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1439
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

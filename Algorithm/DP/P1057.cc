@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1057.cc
 // Description: 传球游戏
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1057
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

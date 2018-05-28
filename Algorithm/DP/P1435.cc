@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1435.cc
 // Description: 回文字串
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: 1https://www.luogu.org/problemnew/show/P1435
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <string>

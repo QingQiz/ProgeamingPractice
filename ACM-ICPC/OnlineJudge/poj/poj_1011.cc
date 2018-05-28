@@ -1,11 +1,8 @@
-// filename: _1011.cc
-// adress: http://poj.org/problem?id=1011
-// |\key to the problem:
-//		搜索的方法以前做过一道题，可以套用
-//		重要的是剪枝：剪枝见代码注释
-//
-// Create by Sofee on 2018-03-01
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://poj.org/problem?id=1011
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstring>
 #include <cstdio>
 #include <iostream>
@@ -75,3 +72,7 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 搜索的方法以前做过一道题，可以套用
+// 重要的是剪枝：剪枝见代码注释
+// ============================================================

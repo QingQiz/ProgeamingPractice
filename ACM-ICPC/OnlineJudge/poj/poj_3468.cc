@@ -1,10 +1,8 @@
-// filename: _.cc
-// adress: http://poj.org/problem?id=3468
-// |\key to the problem:
-//		lazy线段树的模板题
-//
-// Create by Sofee on 2018-03-14
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://poj.org/problem?id=3468
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <iostream>
 #include <cstdio>
 
@@ -105,3 +103,6 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// lazy线段树的模板题
+// ============================================================

@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: GYM101201.cc
 // Description: Postman
-// Copyright (c) 2018
 // Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://odzkskevi.qnssl.com/af1ffaf6c7cf3569c7e14f2b15852e3b?v=1524660329
-// License: 
 // ============================================================================
 #include <iostream>
 #include <algorithm>

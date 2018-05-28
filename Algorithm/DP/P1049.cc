@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1049.cc
 // Description: 装箱问题
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1049
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <algorithm>

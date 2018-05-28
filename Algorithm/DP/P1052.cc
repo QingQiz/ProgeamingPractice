@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1052.cc
 // Description: 过河
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1052
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <cstring>

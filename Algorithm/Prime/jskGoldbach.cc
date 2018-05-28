@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: jskGoldbach.cc
 // Description: Goldbach's conjecture
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://nanti.jisuanke.com/t/25985
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <cstdlib>

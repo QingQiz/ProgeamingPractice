@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P2642.cc
 // Description: 双子序列最大和
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P2642
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1719.cc
 // Description: 最大加权矩形
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1719
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

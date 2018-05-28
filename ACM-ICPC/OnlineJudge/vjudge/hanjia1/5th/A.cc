@@ -1,11 +1,8 @@
-// filename: A.cc
-// adress: https://vjudge.net/contest/205709#problem/A
-// |\key to the problem:
-//	    广搜, 从1开始, 下一个数是10或11
-//	    第i个数的下一个数为i0或i1
-//
-// Create by Sofee on 2018-02-21
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: https://vjudge.net/contest/205709#problem/A
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstdio>
 #include <iostream>
 #include <queue>
@@ -37,3 +34,6 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// Keys: 广搜, 从1开始, 下一个数是10或11第i个数的下一个数为i0或i1
+// ============================================================

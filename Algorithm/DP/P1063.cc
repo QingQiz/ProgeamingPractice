@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1063.cc
 // Description: 能量项链
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1063
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 using namespace std;

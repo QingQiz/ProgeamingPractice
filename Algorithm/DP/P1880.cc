@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1880.cc
 // Description:  [NOI1995]石子合并
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1880
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <cstring>

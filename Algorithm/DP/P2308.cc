@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P2308.cc
 // Description: 添加括号
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P2308
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <algorithm>

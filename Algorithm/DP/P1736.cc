@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1736.cc
 // Description: 创意吃鱼法
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1736
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

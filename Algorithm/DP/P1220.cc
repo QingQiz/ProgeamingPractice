@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1220.cc
 // Description: 关路灯
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1220
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <algorithm>

@@ -1,13 +1,8 @@
-// filename: C.cc
-// adress: https://vjudge.net/contest/205709#problem/C
-// |\key to the problem:
-//		先把所有点到终点的距离算出来
-//		然后记忆化搜索，找到方法总数
-//
-//		算距离的时候本来也打算用记忆化搜索做的，结果老是有几个点算不出来。。。
-//
-// Create by Sofee on 2018-02-23
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: https://vjudge.net/contest/205709#problem/C
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <climits>
 #include <cstdio>
 #include <cstring>
@@ -91,3 +86,8 @@ int main() {
         cout << get_ans(1, 1) << std::endl;
     }
 }
+// ============================================================
+// Keys:
+//	先把所有点到终点的距离算出来
+//	然后记忆化搜索，找到方法总数
+// ============================================================

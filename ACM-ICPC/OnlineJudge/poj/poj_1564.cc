@@ -1,10 +1,8 @@
-// filename: _1564.cc
-// adress: http://poj.org/problem?id=1564
-// |\key to the problem:
-//		搜索剪枝，剪枝见注释
-//
-// Create by Sofee on 2018-03-05
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://poj.org/problem?id=1564
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -63,3 +61,6 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 搜索剪枝，剪枝见注释
+// ============================================================

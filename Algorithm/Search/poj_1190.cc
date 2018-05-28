@@ -1,11 +1,8 @@
-// filename: _1190.cc
-// adress: http://poj.org/problem?id=1190
-// |\key to the problem:
-//		搜索剪枝问题，第i层的高最少为i，底面半径最少为i
-//		所以第i层的体积最小为i*i*i PI，侧面积最小为2 * i * i PI
-//
-// Create by Sofee on 2018-03-03
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://poj.org/problem?id=1190
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstdio>
 #include <climits>
 #include <iostream>
@@ -71,3 +68,7 @@ int main() {
     cout << std::endl;
     return 0;
 }
+// ============================================================
+// 搜索剪枝问题，第i层的高最少为i，底面半径最少为i
+// 所以第i层的体积最小为i*i*i PI，侧面积最小为2 * i * i PI
+// ============================================================

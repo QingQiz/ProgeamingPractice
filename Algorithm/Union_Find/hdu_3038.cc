@@ -1,10 +1,8 @@
-// filename: hdu_3038.cc
-// adress: http://acm.hdu.edu.cn/showproblem.php?pid=3038
-// |\key to the problem:
-//		带权的并查集，注意一些细节即可
-//
-// Create by Sofee on 2018-03-18
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://acm.hdu.edu.cn/showproblem.php?pid=3038
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <iostream>
 #include <cstring>
 
@@ -64,3 +62,6 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 带权的并查集，注意一些细节即可
+// ============================================================

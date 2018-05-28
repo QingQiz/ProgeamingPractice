@@ -1,11 +1,8 @@
-// filename: _1166.cc
-// adress: http://acm.hdu.edu.cn/showproblem.php?pid=1166
-// |\key to the problem:
-//		线段树初战
-//		线段树的裸题
-//
-// Create by Sofee on 2018-03-07
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://acm.hdu.edu.cn/showproblem.php?pid=1166
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
@@ -105,3 +102,7 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 线段树初战
+// 线段树的裸题
+// ============================================================

@@ -1,10 +1,8 @@
-// filename: _2367.cc
-// adress: http://poj.org/problem?id=2367
-// |\key to the problem:
-//		拓扑排序的裸题
-//
-// Create by Sofee on 2018-03-05
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://poj.org/problem?id=2367
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <iostream>
 #include <list>
 #include <queue>
@@ -86,3 +84,6 @@ int main() {
     cout << '\n';
     return 0;
 }
+// ============================================================
+// 拓扑排序的裸题
+// ============================================================

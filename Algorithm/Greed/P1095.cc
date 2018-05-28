@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: P1095.cc
 // Description: 守望者的逃离
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: https://www.luogu.org/problemnew/show/P1095
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 

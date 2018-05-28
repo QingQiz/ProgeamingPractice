@@ -1,11 +1,8 @@
-// filename: _3264.cc
-// adress: http://poj.org/problem?id=3264
-// |\key to the problem:
-//		线段树，同时存储最大值和最小值，
-//		询问可以分两个函数，或直接返回一对数
-//
-// Create by Sofee on 2018-03-13
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: http://poj.org/problem?id=3264
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstdio>
 #include <algorithm>
 #include <climits>
@@ -71,3 +68,7 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 线段树，同时存储最大值和最小值，
+// 询问可以分两个函数，或直接返回一对数
+// ============================================================

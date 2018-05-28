@@ -1,10 +1,7 @@
 // ============================================================================
-// Name: GYM101597B.cc
 // Description: Triangle in a Triangle
-// Copyright (c) 2018
-// Author: Sofee < _s@mail.nwpu.edu.cn >
 // URL: http://codeforces.com/gym/101597/problem/B
-// License: 
+// Author: Sofee < _s@mail.nwpu.edu.cn >
 // ============================================================================
 #include <iostream>
 #include <algorithm>

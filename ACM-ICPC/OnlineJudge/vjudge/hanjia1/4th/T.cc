@@ -1,14 +1,8 @@
-// filename: T.cc
-// adress: https://vjudge.net/contest/205708#problem/T
-// |\key to the problem:
-//		扩展欧几里得,列出等式:
-//		(x + t * m) % l == (y + t * n) % l
-//		化简得到:
-//		x - y == (m - n) * x + l * y
-//		再者,最小整数的求法需要理解
-//
-// Create by Sofee on 2018-02-21
-// Copyright © 2018 Sofee. All rights reserved.
+// ============================================================
+// Dsp: 
+// URL: https://vjudge.net/contest/205708#problem/T
+// Author: Sofee ( _s@mail.nwpu.edu.cn )
+// ============================================================
 #include <cstdio>
 #include <iostream>
 
@@ -54,3 +48,10 @@ int main() {
     }
     return 0;
 }
+// ============================================================
+// 扩展欧几里得,列出等式:
+// (x + t * m) % l == (y + t * n) % l
+// 化简得到:
+// x - y == (m - n) * x + l * y
+// 再者,最小整数的求法需要理解
+// ============================================================
