@@ -4,18 +4,6 @@
 
 `/etc/systemd/logind.conf`
 
-### host
-
-`/etc/hosts`
-
-### 源
-
-`/etc/pacman.d/mirrirlist`
-
-### grub
-
-`/etc/default/grub`
-
 ### shadowsocks
 
 `/etc/shadowsocks/`
@@ -65,3 +53,33 @@ defaults.timer.card 1
 ### YouComplete
 
 \# `ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5`
+
+### AUR
+
+\# `vi /etc/pacman.d`
+
+```conf
+[archlinuxcn]
+SigLevel = Optional TrustAll
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+```
+
+\# `pacman -S yaourt`
+
+yaourt 使用代理
+
+\# `pacman -S privoxy`
+
+\# `vi /etc/privoxy/config`
+
+`rward-socks5 / 127.0.0.1:1080 .`
+
+\# `pacman systemctl start privoxy.service`
+
+$ `export https_proxy=127.0.0.1:8118; export http_proxy=127.0.0.1:8118`
+
+### i3-gap
+
+参考 https://github.com/eoli3n/dotfiles
+
+文件管理 `thunar`
