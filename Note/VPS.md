@@ -1,47 +1,31 @@
 ## VPS 科学上网简述
 
-### 更改密码
+### 安全配置
 
-\# `passwd`
-
-### 基本应用
-
-\# `yum install vim`
-
-\# `yum install git`
-
-~~\# `yum install pytho\*`~~
-
-### 修改服务器开放的端口
-
-\# `vi /etc/ssh/sshd_config`
-
-\# `iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport <port> -j ACCEPT`
-
-\# `iptables -I INPUT -p udp -m state --state NEW -m udp --dport <port> -j ACCEPT`
-
-\# `iptables-save`
+参考 [Linux VPS 安全配置](https://www.cnblogs.com/darknebula/p/7250235.html)
 
 ### 部署 ssr
 
-\# `wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh`
+\# `pip install shadowsocks`
 
-\# `vi /etc/shadowsocks.json`
+\# `mkdir /root/shadowsocks`
+
+\# `vim ss.json`
 
 ```json
-"server":"0.0.0.0",
-"local_address":"127.0.0.1",
-"local_port":1080,
-"port_password":{
-    "<port>":"<password>",
-    "<port>":"<password>"
-},
-"timeout":300,
-"method":"aes-256-cfb",
-"fast_open":true
+{  
+    "server":"xx.xx.xx.xx",  
+    "local_address":"127.0.0.1",  
+    "local_port":1080,  
+    "port_password":{
+	    "xxxx":"xxxxxxxx",
+	    "xxxx":"xxxxxxxx"
+    },
+    "timeout":300,
+    "method":"aes-256-cfb",  
+    "fast-open":false  
+} 
 ```
-
-#### 防火墙配置
 
 \# `iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport <port> -j ACCEPT`
 
@@ -49,21 +33,20 @@
 
 \# `iptables-save`
 
-\# `/etc/init.d/shadowsocks restart`
+\# `ssserver -c /root/shadowsocks/ss.json -d start`
 
-
-#### 客户端配置
+客户端配置
 
 ```json
 {
-    "server":"my_server_ip",
-    "server_port":8388,
+    "server":"xx.xx.xx.xx",
+    "server_port":xxxx,
     "local_address": "127.0.0.1",
     "local_port":1080,
-    "password":"mypassword",
+    "password":"xxxxxxxx",
     "timeout":300,
     "method":"aes-256-cfb",
-    "fast_open": true,
+    "fast_open": false,
     "workers": 1,
     "prefer_ipv6": false
 }
@@ -89,4 +72,4 @@
 
 \# `wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh`
 
-\# `systemctl restart sshd.service`
+\# ssserver -c /root/shadowsocks/ss.json -d restart
