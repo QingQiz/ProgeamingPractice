@@ -87,3 +87,20 @@ $ `export https_proxy=127.0.0.1:8118; export http_proxy=127.0.0.1:8118`
 
 参考[eoli3n 的dotfiles](https://github.com/eoli3n/dotfiles)
 
+### Mathematica
+
+打开mathematica时出错
+
+> `/opt/Mathematica/SystemFiles/FrontEnd/Binaries/Linux-x86-64/Mathematica: symbol lookup error: /usr/lib/libfontconfig.so.1: undefined symbol: FT_Done_MM_Var`
+
+Solution: [Mathematica and freetype-2.9 undefined symbol](https://forums.gentoo.org/viewtopic-p-8198000.html?sid=ab27c1ca8e1927691858595185e18284)
+
+> I discovered the source of the problem. Mathematica includes its own freetype.so.6 library in the directory ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64. This freetype library will call the system fontconfig which will give the error.
+
+> To fix this, just remove or rename the mathematica freetype.so.6 library. This will force Mathematica to use the system freetype library.
+
+> This solution will allow one to keep the latest freetype-2.9 and no downgrade will be necessary.
+
+> If Mathematica gives other errors on startup, like with libz.so, check if that library is installed in ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64 and if so then remove or rename it.
+
+> I hope this helps.
