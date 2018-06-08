@@ -79,7 +79,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 `rward-socks5 / 127.0.0.1:1080 .`
 
-\# `pacman systemctl start privoxy.service`
+\# `systemctl start privoxy.service`
 
 $ `export https_proxy=127.0.0.1:8118; export http_proxy=127.0.0.1:8118`
 

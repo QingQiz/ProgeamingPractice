@@ -1,4 +1,5 @@
 _*.cc
+test*
 temp
 SignIn
 now
