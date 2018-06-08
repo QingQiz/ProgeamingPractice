@@ -40,18 +40,8 @@ public:
 
     // swap the digit on l and r
     int swap(int l, int r) {
-        int currects = status;
-        int ln = (currects & (1 << (16 - l))) >> (16 - l);
-        int lr = (currects & (1 << (16 - r))) >> (16 - r);
-        if (ln == lr) return currects;
-        if (ln == 0 && lr == 1) {
-            currects += (1 << (16 - l));
-            currects -= (1 << (16 - r));
-        } else {
-            currects -= (1 << (16 - l));
-            currects += (1 << (16 - r));
-        }
-        return currects;
+        if ((status & (1 << (16 - l))) == (status & (1 << (16 - r)))) return status;
+        else return (status ^ ((1 << (16 - l)) | (1 << (16 - r))));
     }
 
     int getRoot(int nextstatus) {
