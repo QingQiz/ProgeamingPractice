@@ -40,7 +40,7 @@ public:
 
     // swap the digit on l and r
     int swap(int l, int r) {
-        if ((status & (1 << (16 - l))) == (status & (1 << (16 - r)))) return status;
+        if ((status & (1 << (16 - l))) >> (16 - l)  == (status & (1 << (16 - r))) >> (16 - r)) return status;
         else return (status ^ ((1 << (16 - l)) | (1 << (16 - r))));
     }
 
