@@ -104,3 +104,9 @@ Solution: [Mathematica and freetype-2.9 undefined symbol](https://forums.gentoo.
 > If Mathematica gives other errors on startup, like with libz.so, check if that library is installed in ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64 and if so then remove or rename it.
 
 > I hope this helps.
+
+mathematica 自动在`$HOME`创建`Wolfram Mathematica`
+
+\# `pacman -S xdg-user-dirs`
+
+$ `xdg-user-dirs-update`
