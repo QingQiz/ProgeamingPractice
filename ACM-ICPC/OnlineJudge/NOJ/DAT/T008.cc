@@ -31,8 +31,6 @@ int main() {
                 tn -= 1, to -= 1;
             }
             to -= 1;
-            // stan[tn - 2] += stan[tn - 1] + stao[to - 1];
-            // tn -= 1, to -= 2;
         } else if (j(s[i])) {
             while (rank[(int)stao[to - 1]] >= rank[(int)s[i]]) {
                 stan[tn - 2] += stan[tn - 1] + stao[to - 1];
