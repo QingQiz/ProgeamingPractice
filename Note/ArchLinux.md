@@ -110,3 +110,30 @@ mathematica 自动在`$HOME`创建`Wolfram Mathematica`
 \# `pacman -S xdg-user-dirs`
 
 $ `xdg-user-dirs-update`
+
+## touchpad
+
+\# `pacman -S xf86-input-synaptics`
+
+#### 自然滚动
+
+`synclient VertScrollDelta=-66`
+
+#### 环形滚动
+
+`synclient CircularScrolling=1`
+
+#### 指针速度
+
+`synclient MaxSpeed=xxx`
+
+`synclient MinSpeed=xxx`
+
+#### 单击, 双击, 中键
+
+`synclient TapButton1=1`
+
+`synclient TapButton2=3`
+
+`synclient TapButton3=2`
+
