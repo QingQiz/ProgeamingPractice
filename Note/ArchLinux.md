@@ -137,3 +137,12 @@ $ `xdg-user-dirs-update`
 
 `synclient TapButton3=2`
 
+### wifi-menu "No network found"
+
+\# `ip link set wlo1 up`
+
+if
+
+> RTNETLINK answers: Operation not possible due to RF-kill
+
+then \# `rfkill unblock wifi`
