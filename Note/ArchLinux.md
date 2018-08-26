@@ -75,7 +75,9 @@ $ `export https_proxy=127.0.0.1:8118; export http_proxy=127.0.0.1:8118`
 
 参考[eoli3n 的dotfiles](https://github.com/eoli3n/dotfiles)
 
-## Mathematica
+## Application
+
+### Mathematica
 
 打开mathematica时出错
 
@@ -97,27 +99,24 @@ $ `xdg-user-dirs-update`
 
 \# `pacman -S xf86-input-synaptics`
 
-### 自然滚动
+自然滚动 `synclient VertScrollDelta=-66`
 
-`synclient VertScrollDelta=-66`
+环形滚动 `synclient CircularScrolling=1`
 
-### 环形滚动
+指针速度
 
-`synclient CircularScrolling=1`
+```shell
+synclient MaxSpeed=xxx
+synclient MinSpeed=xxx
+```
 
-### 指针速度
+单击, 双击, 中键
 
-`synclient MaxSpeed=xxx`
-
-`synclient MinSpeed=xxx`
-
-### 单击, 双击, 中键
-
-`synclient TapButton1=1`
-
-`synclient TapButton2=3`
-
-`synclient TapButton3=2`
+```shell
+synclient TapButton1=1
+synclient TapButton2=3
+synclient TapButton3=2
+```
 
 ## Network
 
@@ -167,33 +166,32 @@ use `bluetoothctl` to config it.
 
 this is an example below
 
-> \# bluetoothctl 
-[NEW] Controller 00:10:20:30:40:50 pi [default]
-[bluetooth]# agent KeyboardOnly 
-Agent registered
-[bluetooth]# default-agent 
-Default agent request successful
-[bluetooth]# scan on
-Discovery started
-[CHG] Controller 00:10:20:30:40:50 Discovering: yes
-[NEW] Device 00:12:34:56:78:90 myLino
-[CHG] Device 00:12:34:56:78:90 LegacyPairing: yes
-[bluetooth]# pair 00:12:34:56:78:90
-Attempting to pair with 00:12:34:56:78:90
-[CHG] Device 00:12:34:56:78:90 Connected: yes
-[CHG] Device 00:12:34:56:78:90 Connected: no
-[CHG] Device 00:12:34:56:78:90 Connected: yes
-Request PIN code
-[agent] Enter PIN code: 1234
-[CHG] Device 00:12:34:56:78:90 Paired: yes
-Pairing successful
-[CHG] Device 00:12:34:56:78:90 Connected: no
-[bluetooth]# connect 00:12:34:56:78:90
-Attempting to connect to 00:12:34:56:78:90
-[CHG] Device 00:12:34:56:78:90 Connected: yes
-Connection successful
+> [NEW] Controller 00:10:20:30:40:50 pi [default]
+> [bluetooth]# agent KeyboardOnly 
+> Agent registered
+> [bluetooth]# default-agent 
+> Default agent request successful
+> [bluetooth]# scan on
+> Discovery started
+> [CHG] Controller 00:10:20:30:40:50 Discovering: yes
+> [NEW] Device 00:12:34:56:78:90 myLino
+> [CHG] Device 00:12:34:56:78:90 LegacyPairing: yes
+> [bluetooth]# pair 00:12:34:56:78:90
+> Attempting to pair with 00:12:34:56:78:90
+> [CHG] Device 00:12:34:56:78:90 Connected: yes
+> [CHG] Device 00:12:34:56:78:90 Connected: no
+> [CHG] Device 00:12:34:56:78:90 Connected: yes
+> Request PIN code
+> [agent] Enter PIN code: 1234
+> [CHG] Device 00:12:34:56:78:90 Paired: yes
+> Pairing successful
+> [CHG] Device 00:12:34:56:78:90 Connected: no
+> [bluetooth]# connect 00:12:34:56:78:90
+> Attempting to connect to 00:12:34:56:78:90
+> [CHG] Device 00:12:34:56:78:90 Connected: yes
+> Connection successful
 
-## some applications
+## some useful applications
 
 [k3b](https://userbase.kde.org/K3b)
 > K3b is a simple, yet powerful and highly-configurable graphical optical disk burning application for audio, video, data projects and more!
