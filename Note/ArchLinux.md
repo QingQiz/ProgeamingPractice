@@ -191,6 +191,19 @@ this is an example below
 > [CHG] Device 00:12:34:56:78:90 Connected: yes
 > Connection successful
 
+## Others
+
+In Arch Linux  `pacman -Syu` shows
+
+```
+Possibly missing firmware for module: aic94xx
+Possibly missing firmware for module: wd719x
+```
+
+Solve
+
+https://gist.github.com/imrvelj/c65cd5ca7f5505a65e59204f5a3f7a6d
+
 ## some useful applications
 
 [k3b](https://userbase.kde.org/K3b)
