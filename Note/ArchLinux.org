@@ -1,0 +1,58 @@
+#+TITLE: Config in ArchLinux
+
+* Language Config
+** Can't input Chinese in QT application
+   - run =qtconfig-qt4=
+     Interface -> Default Input Method -> iBus
+   - add =exec --no-startup-id ibus-daemon --xim -d= to i3config
+
+* Sound
+** no sound in archlinux
+  - =pacman -S alsamixer=
+** no sound in ASUS laptop
+  - add following code to =$HOEM/.asoundrc=
+    #+BEGIN_SCR shell
+    defaults.ctl.card 1
+    defaults.pcm.card 1
+    defaults.timer.card 1
+    #+END_SCR
+  
+* VIM
+** YouCompleteMe
+   - execute =ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5=
+
+* Package
+** AUR
+   - =vi /etc/pacman.conf= and add code below
+    #+BEGIN_SCR shell
+    [archlinuxcn]
+    SigLevel = Optional TrustAll
+    Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+    #+END_SCR
+** use proxy in yaourt
+   - execute =pacman -S privoxy=
+   - add =rward-socks5 / 127.0.0.1:1080= to =/etc/privoxy/config=
+   - execute =systemctl start privoxy.service=
+   - =export https_proxy=127.0.0.1:8118; export http_proxy=127.0.0.1:8118=
+
+* i3-wm
+** [[https://github.com/eoli3n/dotfiles][eoli3n 的 dotfiles]]
+
+* Application
+** Mathematica
+*** error when open mathematica
+     #+BEGIN_EXAMPLE
+     /opt/Mathematica/SystemFiles/FrontEnd/Binaries/Linux-x86-64/Mathematica: symbol lookup error: /usr/lib/libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+     #+END_EXAMPLE
+     - Solution:
+       [[https://forums.gentoo.org/viewtopic-p-8198000.html?sid=ab27c1ca8e1927691858595185e18284][Mathematica and freetype-2.9 undefined symbol]]
+       #+BEGIN_EXAMPLE
+        I discovered the source of the problem. Mathematica includes its own freetype.so.6 library in the directory ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64. This freetype library will call the system fontconfig which will give the error.
+        To fix this, just remove or rename the mathematica freetype.so.6 library. This will force Mathematica to use the system freetype library.
+        This solution will allow one to keep the latest freetype-2.9 and no downgrade will be necessary.
+        If Mathematica gives other errors on startup, like with libz.so, check if that library is installed in ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64 and if so then remove or rename it.
+       #+END_EXAMPLE
+*** mathematica create =Wolfram Mathematica= on $HOME
+    - =pacman -S xdg-user-dirs=
+    - =xdg-user-dirs-update=
+** Touchpad
