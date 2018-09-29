@@ -32,7 +32,7 @@ struct Mat {
 };
 
 Mat quickprodect(Mat base, long long idx) {
-    Mat ret = base;
+    Mat ret(base.row, base.col);
     Mat tmp = base;
     for (long long i = 0; i < ret.row; ++i) for (long long j = 0; j < ret.col; ++j) {
         if (i == j) ret[i][j] = 1;
