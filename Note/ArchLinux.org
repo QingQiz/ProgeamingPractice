@@ -56,3 +56,5 @@
     - =pacman -S xdg-user-dirs=
     - =xdg-user-dirs-update=
 ** Touchpad
+** Screen at tty
+   For example: =sudo fbcat > xxx.png=
