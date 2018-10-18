@@ -11,20 +11,20 @@
    - =pacman -S alsamixer=
 ** no sound in ASUS laptop
    - add following code to =$HOEM/.asoundrc=
-     #+BEGIN_SCR shell
-     defaults.ctl.card 1
-     defaults.pcm.card 1
-     defaults.timer.card 1
-     #+END_SCR
+#+BEGIN_SCR shell
+   defaults.ctl.card 1
+   defaults.pcm.card 1
+   defaults.timer.card 1
+#+END_SCR
 
 * Package
 ** AUR
    - =vi /etc/pacman.conf= and add code below
-     #+BEGIN_SCR shell
-     [archlinuxcn]
-     SigLevel = Optional TrustAll
-     Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-     #+END_SCR
+#+BEGIN_SCR shell
+   [archlinuxcn]
+   SigLevel = Optional TrustAll
+   Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+#+END_SCR
 ** use proxy in yaourt
    - execute =pacman -S privoxy=
    - add =rward-socks5 / 127.0.0.1:1080= to =/etc/privoxy/config=
@@ -40,17 +40,17 @@
     - execute =ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5=
 ** Mathematica
 *** error when open mathematica
-    #+BEGIN_EXAMPLE
-    /opt/Mathematica/SystemFiles/FrontEnd/Binaries/Linux-x86-64/Mathematica: symbol lookup error: /usr/lib/libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
-    #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+        /opt/Mathematica/SystemFiles/FrontEnd/Binaries/Linux-x86-64/Mathematica: symbol lookup error: /usr/lib/libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+#+END_EXAMPLE
     - Solution:
       [[https://forums.gentoo.org/viewtopic-p-8198000.html?sid=ab27c1ca8e1927691858595185e18284][Mathematica and freetype-2.9 undefined symbol]]
-      #+BEGIN_EXAMPLE
-       I discovered the source of the problem. Mathematica includes its own freetype.so.6 library in the directory ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64. This freetype library will call the system fontconfig which will give the error.
-       To fix this, just remove or rename the mathematica freetype.so.6 library. This will force Mathematica to use the system freetype library.
-       This solution will allow one to keep the latest freetype-2.9 and no downgrade will be necessary.
-       If Mathematica gives other errors on startup, like with libz.so, check if that library is installed in ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64 and if so then remove or rename it.
-      #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+           I discovered the source of the problem. Mathematica includes its own freetype.so.6 library in the directory ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64. This freetype library will call the system fontconfig which will give the error.
+           To fix this, just remove or rename the mathematica freetype.so.6 library. This will force Mathematica to use the system freetype library.
+           This solution will allow one to keep the latest freetype-2.9 and no downgrade will be necessary.
+           If Mathematica gives other errors on startup, like with libz.so, check if that library is installed in ${TopDirectory}/SystemFiles/Libraries/Linux-x86-64 and if so then remove or rename it.
+#+END_EXAMPLE
 *** mathematica create =Wolfram Mathematica= on $HOME
     - =pacman -S xdg-user-dirs=
     - =xdg-user-dirs-update=
@@ -60,16 +60,16 @@
      - 自然滚动 =synclient VertScrollDelta=-66=
      - 环形滚动 =synclient CircularScrolling=1=
 **** 指针速度
-     #+BEGIN_SCR shell
+#+BEGIN_SCR shell
      synclient MaxSpeed=xxx
      synclient MinSpeed=xxx
-     #+END_SCR
+#+END_SCR
 **** 单击, 双击, 中键
-     #+BEGIN_SCR shell
+#+BEGIN_SCR shell
      synclient TapButton1=1
      synclient TapButton2=3
      synclient TapButton3=2
-     #+END_SCR
+#+END_SCR
 
 ** Screenshot on tty
    For example: =sudo fbcat > xxx.png=
@@ -82,28 +82,28 @@
      - =rfkill unblock wifi=
 ** shadowsocks
    - =vim /etc/shadowsocks/conf.json= add code below
-     #+BEGIN_SCR json
-     {
-     "server":"my_server_ip",
-     "server_port":8388,
-     "local_address": "127.0.0.1",
-     "local_port":1080,
-     "password":"mypassword",
-     "timeout":300,
-     "method":"aes-256-cfb",
-     "fast_open": false,
-     "workers": 1,
-     "prefer_ipv6": false
-     }
-     #+END_SCR
+#+BEGIN_SCR json
+   {
+   "server":"my_server_ip",
+   "server_port":8388,
+   "local_address": "127.0.0.1",
+   "local_port":1080,
+   "password":"mypassword",
+   "timeout":300,
+   "method":"aes-256-cfb",
+   "fast_open": false,
+   "workers": 1,
+   "prefer_ipv6": false
+   }
+#+END_SCR
 ** Bluetooth
    [[https://wiki.archlinux.org/index.php/Bluetooth][ArchWiki]]
 ** OTHER
    /=pacman -Syu= shows/
-   #+BEGIN_EXAMPLE
-   Possibly missing firmware for module: aic94xx
-   Possibly missing firmware for module: wd719x
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+      Possibly missing firmware for module: aic94xx
+      Possibly missing firmware for module: wd719x
+#+END_EXAMPLE
    - Solution: [[https://gist.github.com/imrvelj/c65cd5ca7f5505a65e59204f5a3f7a6d][imrvelj's github]]
 ** Some useful applications
    - [[https://userbase.kde.org/K3b][K3b]]
