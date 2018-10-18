@@ -58,3 +58,5 @@
 ** Touchpad
 ** Screen at tty
    For example: =sudo fbcat > xxx.png=
+** Screen Lock
+   [[https://github.com/pavanjadhaw/betterlockscreen][betterlockscreen]]
