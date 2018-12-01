@@ -8,7 +8,7 @@
 
 * Sound
 ** no sound in archlinux
-   - =pacman -S alsamixer=
+   - =pacman -S alsa-utils=
 ** no sound in ASUS laptop
    - add following code to =$HOEM/.asoundrc=
    #+BEGIN_SRC shell
