@@ -1,0 +1,46 @@
+$date
+	Mon Dec  3 20:41:14 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tde2t4 $end
+$var wire 4 ! out [3:0] $end
+$var reg 2 " in [1:0] $end
+$scope module test $end
+$var wire 2 # code [1:0] $end
+$var reg 4 $ de [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 $
+b0 #
+b0 "
+b1 !
+$end
+#20
+b10 !
+b10 $
+b1 "
+b1 #
+#40
+b100 !
+b100 $
+b10 "
+b10 #
+#60
+b1000 !
+b1000 $
+b11 "
+b11 #
+#80
+b1 !
+b1 $
+b0 "
+b0 #
+#100

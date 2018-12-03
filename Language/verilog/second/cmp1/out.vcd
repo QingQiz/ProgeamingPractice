@@ -1,0 +1,49 @@
+$date
+	Mon Dec  3 23:05:00 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tcmp1 $end
+$var wire 1 ! xlsy $end
+$var wire 1 " xgty $end
+$var wire 1 # xeqy $end
+$var reg 1 $ x $end
+$var reg 1 % y $end
+$scope module test $end
+$var wire 1 $ x $end
+$var wire 1 % y $end
+$var reg 1 # xeqy $end
+$var reg 1 " xgty $end
+$var reg 1 ! xlsy $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+1#
+0"
+0!
+$end
+#10
+1"
+0#
+1$
+#20
+1!
+0"
+0$
+1%
+#30
+0!
+1#
+1$
+#40
+0$
+0%
+#50
