@@ -26,6 +26,7 @@
    Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
    #+END_SRC
 ** use proxy in yaourt
+*** proxychains
    - =pacman -S privoxy=
    - add =rward-socks5 / 127.0.0.1:1080= to =/etc/privoxy/config=
    - =systemctl start privoxy.service=

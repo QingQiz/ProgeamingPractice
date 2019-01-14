@@ -8,17 +8,15 @@
 
 \# `pip install shadowsocks`
 
-\# `mkdir /root/shadowsocks`
-
-\# `vim ss.json`
+\# `vim /path/to/ss.json`
 
 ```json
 {  
-    "server":"xx.xx.xx.xx",  
+    "server":"your server name",  
     "local_address":"127.0.0.1",  
     "local_port":1080,  
     "port_password":{
-	    "xxxx":"xxxxxxxx",
+	    "port":"password",
 	    "xxxx":"xxxxxxxx"
     },
     "timeout":300,
@@ -27,13 +25,32 @@
 } 
 ```
 
-\# `iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport <port> -j ACCEPT`
+\# `vim /etc/systemd/system/ssserver.service`
 
-\# `iptables -I INPUT -m state --state NEW -m udp -p udp --dport <port> -j ACCEPT`
+```systemd
+[Unit]
+Description = Start ssserver
 
-\# `iptables-save`
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssserver -c /path/to/ss.json
+ExecStartPost=/sbin/iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
+ExecStartPost=/sbin/iptables -I INPUT -m state --state NEW -m udp -p udp --dport 3389 -j ACCEPT
+ExecStartPost=/sbin/ip6tables -I INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
+ExecStartPost=/sbin/ip6tables -I INPUT -m state --state NEW -m udp -p udp --dport 3389 -j ACCEPT
+ExecStartPost=/sbin/iptables-save
+ExecStartPost=/sbin/ip6tables-save
+Restart=always
+RestartSce=2s
 
-\# `ssserver -c /root/shadowsocks/ss.json -d start`
+[Install]
+WantedBy=multi-user.target
+```
+
+\# `systemctl start ssserver.service`
+
+\# `systemctl enable ssserver.service`
+
 
 客户端配置
 
@@ -62,14 +79,16 @@
 
 `net.ipv4.tcp_fastopen = 3`
 
-### 部署锐速
+### 部署 Google BBR
 
-#### 更改内核版本
+\# `wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh`
 
-\# `rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force`
+\# `chmod +x bbr.sh`
 
-#### 下载锐速
+\# `./bbr.sh`
 
-\# `wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh`
+\# `reboot`
 
-\# ssserver -c /root/shadowsocks/ss.json -d restart
+\# `sysctl net.ipv4.tcp_available_congestion_control`
+
+> this command will return `net.ipv4.tcp_available_congestion_control = bbr cubic reno`
