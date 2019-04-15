@@ -1,0 +1,153 @@
+$date
+	Thu Apr  4 00:16:48 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module test_main $end
+$var wire 1 ! TxD $end
+$var reg 1 " A0 $end
+$var reg 1 # CLK2M $end
+$var reg 1 $ CS $end
+$var reg 8 % D [7:0] $end
+$var reg 1 & FS $end
+$var reg 1 ' RD $end
+$var reg 1 ( RESET $end
+$var reg 1 ) WR $end
+$scope module test $end
+$var wire 1 " A0 $end
+$var wire 1 # CLK2M $end
+$var wire 1 $ CS $end
+$var wire 8 * D [7:0] $end
+$var wire 1 & FS $end
+$var wire 1 ' RD $end
+$var wire 1 ( RESET $end
+$var wire 1 ) WR $end
+$var reg 3 + READ [2:0] $end
+$var reg 8 , THR0 [7:0] $end
+$var reg 8 - THR1 [7:0] $end
+$var reg 8 . THR2 [7:0] $end
+$var reg 8 / THR3 [7:0] $end
+$var reg 1 0 THR_EMPTY $end
+$var reg 1 1 THR_EMPTY0 $end
+$var reg 1 2 THR_EMPTY1 $end
+$var reg 1 3 THR_EMPTY2 $end
+$var reg 1 4 THR_EMPTY3 $end
+$var reg 8 5 TSR [7:0] $end
+$var reg 8 6 TSR_EMPTY [7:0] $end
+$var reg 1 ! TxD $end
+$var reg 1 7 TxD_FREE $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x7
+bx 6
+bx 5
+x4
+x3
+x2
+x1
+x0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+1)
+1(
+1'
+0&
+bx %
+x$
+0#
+x"
+x!
+$end
+#488
+b111110 5
+10
+17
+b0 6
+04
+13
+12
+11
+b11 +
+1#
+#489
+1&
+#976
+b10101010 %
+b10101010 *
+0#
+#1464
+b10 +
+b10101010 /
+b0 6
+04
+1#
+#1465
+0(
+#1952
+0#
+#2440
+b10 6
+b1111100 5
+0!
+b1 +
+03
+b1010101 .
+00
+07
+1#
+b1010101 %
+b1010101 *
+#2928
+0#
+#3416
+b110 6
+b11111000 5
+b0 +
+02
+b1010101 -
+1#
+#3903
+b10011001 %
+b10011001 *
+#3904
+0#
+#4392
+b1110 6
+b11110000 5
+1!
+1#
+#4880
+0#
+#5368
+b11110 6
+b11100000 5
+1#
+#5854
+b1100110 %
+b1100110 *
+#5856
+0#
+#6344
+b111110 6
+b11000000 5
+1#
+#6832
+0#
+#7320
+b1111110 6
+b10000000 5
+1#
+#7808
+0#
+#7854

@@ -128,27 +128,9 @@ if
 
 > RTNETLINK answers: Operation not possible due to RF-kill
 
-then \# `rfkill unblock wifi`
+then 
 
-
-### shadowsocks
-
-`vim /etc/shadowsocks/`
-
-```json
-{
-    "server":"my_server_ip",
-    "server_port":8388,
-    "local_address": "127.0.0.1",
-    "local_port":1080,
-    "password":"mypassword",
-    "timeout":300,
-    "method":"aes-256-cfb",
-    "fast_open": false,
-    "workers": 1,
-    "prefer_ipv6": false
-}
-```
+\# `rfkill unblock wifi`
 
 
 ## Bluetooth
@@ -166,17 +148,28 @@ use `bluetoothctl` to config it.
 
 this is an example below
 
+```
+power on
+scan on
+```
+
+以下为一个交互实例：
+
+\# `bluetoothctl` 
 > [NEW] Controller 00:10:20:30:40:50 pi [default]
-> [bluetooth]# agent KeyboardOnly 
+agent KeyboardOnly 
 > Agent registered
-> [bluetooth]# default-agent 
+default-agent 
 > Default agent request successful
-> [bluetooth]# scan on
+power on
+> Changing power on succeeded
+> [CHG] Controller 00:10:20:30:40:50 Powered: yes
+scan on
 > Discovery started
 > [CHG] Controller 00:10:20:30:40:50 Discovering: yes
 > [NEW] Device 00:12:34:56:78:90 myLino
 > [CHG] Device 00:12:34:56:78:90 LegacyPairing: yes
-> [bluetooth]# pair 00:12:34:56:78:90
+pair 00:12:34:56:78:90
 > Attempting to pair with 00:12:34:56:78:90
 > [CHG] Device 00:12:34:56:78:90 Connected: yes
 > [CHG] Device 00:12:34:56:78:90 Connected: no
@@ -186,14 +179,15 @@ this is an example below
 > [CHG] Device 00:12:34:56:78:90 Paired: yes
 > Pairing successful
 > [CHG] Device 00:12:34:56:78:90 Connected: no
-> [bluetooth]# connect 00:12:34:56:78:90
+connect 00:12:34:56:78:90
 > Attempting to connect to 00:12:34:56:78:90
 > [CHG] Device 00:12:34:56:78:90 Connected: yes
 > Connection successful
 
+
 ## Others
 
-In Arch Linux  `pacman -Syu` shows
+`pacman -Syu` shows
 
 ```
 Possibly missing firmware for module: aic94xx

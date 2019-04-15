@@ -1,0 +1,192 @@
+$date
+	Sat Dec  8 16:04:14 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tcounter $end
+$var wire 1 ! q0 $end
+$var wire 1 " q1 $end
+$var wire 1 # q2 $end
+$var wire 1 $ q3 $end
+$var reg 1 % clock $end
+$var reg 1 & reset $end
+$scope module test $end
+$var wire 1 % clock $end
+$var wire 1 & reset $end
+$var reg 1 ' q0 $end
+$var reg 1 ( q1 $end
+$var reg 1 ) q2 $end
+$var reg 1 * q3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+0)
+0(
+0'
+1&
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+x!
+1'
+1%
+#10
+0%
+#15
+x"
+1(
+0!
+0'
+1%
+#20
+0%
+#25
+x!
+1'
+1%
+#30
+0%
+#35
+x#
+1)
+0"
+0(
+0!
+0'
+1%
+#40
+0%
+#45
+x!
+1'
+1%
+#50
+0%
+#55
+x"
+1(
+0!
+0'
+1%
+#60
+0%
+#65
+x!
+1'
+1%
+#70
+0%
+#75
+x$
+1*
+0#
+0)
+0"
+0(
+0!
+0'
+1%
+#80
+0%
+#85
+x!
+1'
+1%
+#90
+0%
+#95
+x"
+1(
+0!
+0'
+1%
+#100
+0%
+#105
+x!
+1'
+1%
+#110
+0%
+#115
+x#
+1)
+0"
+0(
+0!
+0'
+1%
+#120
+0%
+#125
+x!
+1'
+1%
+#130
+0%
+#135
+x"
+1(
+0!
+0'
+1%
+#140
+0%
+#145
+x!
+1'
+1%
+#150
+0%
+#155
+0$
+0*
+0#
+0)
+0"
+0(
+0!
+0'
+1%
+#160
+0%
+#165
+x!
+1'
+1%
+#170
+0%
+#175
+x"
+1(
+0!
+0'
+1%
+#180
+0%
+#185
+x!
+1'
+1%
+#190
+0%
+#195
+x#
+1)
+0"
+0(
+0!
+0'
+1%
+#200
