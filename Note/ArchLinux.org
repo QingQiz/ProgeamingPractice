@@ -70,3 +70,5 @@
    /xss-lock-gitAUR 订阅 systemd 的 suspend, hibernate, lock-session 和 unlock-session 事件，并执行对应的动作(运行屏幕锁定并等待用户解锁或停止锁定). xss-lock 还会响应 DPMS 事件并执行屏幕锁定和解锁动作。/
 ** =xfreerdp=
    example for multi screen: =xfreerdp /multimon /u:username /v:hostaddr:port
+** =Shutter=
+   take screenshot
