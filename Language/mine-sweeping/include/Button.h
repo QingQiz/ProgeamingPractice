@@ -20,7 +20,6 @@ public:
 
     bool disabled = false;
     bool left_disabled = false;
-    bool isSurroundShow = false;
 
 public:
     explicit Button(int x=-1, int y=-1);

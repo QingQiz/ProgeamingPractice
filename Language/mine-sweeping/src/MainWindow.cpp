@@ -14,6 +14,7 @@
 #include <string>
 #include <queue>
 #include <map>
+#include <QLCDNumber>
 
 static int mv[8][2] = {
         {1, 0}, {-1, 0}, {0, 1}, {0, -1}, {-1, 1}, {1, -1}, {1, 1}, {-1, -1} };
@@ -30,15 +31,16 @@ MainWindow::MainWindow(int row, int column, int mnumber, QWidget *parent) :
     // TODO make Labels beautiful
     // Time Label
     qTimer = new QTimer(this);
-    auto timeLabel = new QLabel;
-    timeLabel->setText("00:00:00");
-    timeLabel->setStyleSheet("QLabel{font-weight:bold;font-size:35px}");
+    auto timeLabel = new QLCDNumber;
+    timeLabel->display(current_time);
+    //timeLabel->setStyleSheet("QLabel{font-weight:bold;font-size:35px}");
     connect(qTimer, &QTimer::timeout, [=](){
-        QTime qTime = QTime::fromString(timeLabel->text(), "hh:mm:ss");
+        QTime qTime = QTime::fromString(current_time, "hh:mm:ss");
         qTime = qTime.addSecs(1);
 
-        timeLabel->setText(qTime.toString("hh:mm:ss"));
-        timeLabel->setStyleSheet("QLabel{font-weight:bold;font-size:35px}");
+        timeLabel->display(qTime.toString("hh:mm:ss"));
+        current_time = qTime.toString("hh:mm:ss");
+        //timeLabel->setStyleSheet("QLabel{font-weight:bold;font-size:35px}");
         this->repaint();
     });
 
@@ -206,8 +208,9 @@ void MainWindow::victory() {
     for (int i = 0; i < row; ++i) {
         for (int j = 0; j < column; ++j) {
             if (mines[i][j].has_mine) {
-                mines[i][j].setStyleSheet("background-color:rgb(0,255,0)");
-                mines[i][j].setDisable(true);
+                if (mines[i][j].flag == 0) {
+                    mines[i][j].update_flag();
+                }
             }
         }
     }

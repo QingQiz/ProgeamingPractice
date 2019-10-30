@@ -46,7 +46,6 @@ void Button::mouseReleaseEvent(QMouseEvent *e) {
 void Button::mousePressEvent(QMouseEvent *e) {
     if (e->button() == Qt::LeftButton) {
         if (disabled) {
-            isSurroundShow = true;
             emit showSurround(pos_x, pos_y, true);
         }
     }

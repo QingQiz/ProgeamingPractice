@@ -26,6 +26,7 @@ private:
     int active_block;
     bool is_mine_set = false;
     QTimer *qTimer;
+    QString current_time = "00:00:00";
 private:
     void set_mines(int x, int y);
 private slots:
